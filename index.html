@@ -495,14 +495,15 @@
 							name: "Circumscripții școlare",
 							icon: '<i class="fa fa-square" style="font-size:10px;color:#ed90f9;"></i>',
 							layer: (() => {
-								var l = L.geoJson({style: style_c});
+								var l = L.geoJson();
 								$.getJSON('data/c.json', j => {
 									l.addData(j);
 									console.log('j: ' + l);
 								});
 								return l;
 							console.log('l: ' + l);
-							})({style: style_c})
+							})()
+							console.log('out: ' + layer);
 						},
 						{
 							active: false,
