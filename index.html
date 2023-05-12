@@ -499,10 +499,25 @@
 							layer: (() => {
 								var l = L.geoJson();
 								$.getJSON('data/c.json', j => {
-									l.addData(j);
+									l.addData(j {style: {
+  fillColor: setEthnic1Color(feature.properties.Ethnic1),
+  weight: 2,
+  opacity: 1,
+  color: 'white',
+  dashArray: '3',
+  fillOpacity: 0.7}
+ };});
+									console.log('j: ' + l);
 								});
-								return l;
-								console.log(l);
+								return l {{style {
+  fillColor: setEthnic1Color(feature.properties.Ethnic1),
+  weight: 2,
+  opacity: 1,
+  color: 'white',
+  dashArray: '3',
+  fillOpacity: 0.7}
+ };};
+							console.log('l: ' + l);
 							})()
 						},
 						{
