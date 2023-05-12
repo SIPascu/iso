@@ -1,0 +1,14 @@
+var s3 = {
+"type": "FeatureCollection",
+"name": "s3",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Id": "80", "Nr_schimbu": 3, "Schimb_1": 435, "Schimb_2": 501, "Schimb_3": 289, "Nr_Sali_lo": null, "Labor_cab": 4, "Salidecls": 17, "person_cal": 70, "pers_neca": 2, "pers_neces": 0, "Nr_Sali_oc": 17, "Nume": "Scoala Gimnaziala Nr. 49", "layer": "Scoli" }, "geometry": { "type": "Point", "coordinates": [ 26.145244351433835, 44.440194495380716 ] } },
+{ "type": "Feature", "properties": { "Id": "149", "Nr_schimbu": 3, "Schimb_1": 673, "Schimb_2": 148, "Schimb_3": 655, "Nr_Sali_lo": null, "Labor_cab": 1, "Salidecls": 26, "person_cal": 83, "pers_neca": 0, "pers_neces": 0, "Nr_Sali_oc": 27, "Nume": "Scoala Gimnaziala Herastrau", "layer": "ScoliS1" }, "geometry": { "type": "Point", "coordinates": [ 26.098528971402882, 44.481427035065721 ] } },
+{ "type": "Feature", "properties": { "Id": "154", "Nr_schimbu": 3, "Schimb_1": 727, "Schimb_2": 86, "Schimb_3": 654, "Nr_Sali_lo": null, "Labor_cab": 5, "Salidecls": 28, "person_cal": 89, "pers_neca": 0, "pers_neces": 0, "Nr_Sali_oc": 28, "Nume": "Scoala Gimnaziala Pia Bratianu", "layer": "ScoliS1" }, "geometry": { "type": "Point", "coordinates": [ 26.078314310569098, 44.461566783500807 ] } },
+{ "type": "Feature", "properties": { "Id": "183", "Nr_schimbu": 3, "Schimb_1": 188, "Schimb_2": 198, "Schimb_3": 197, "Nr_Sali_lo": null, "Labor_cab": 0, "Salidecls": 0, "person_cal": 45, "pers_neca": 0, "pers_neces": 0, "Nr_Sali_oc": 9, "Nume": "Scoala Gimnaziala Ion I. C. Bratianu", "layer": "ScoliS5" }, "geometry": { "type": "Point", "coordinates": [ 26.066441019776249, 44.403748834585329 ] } },
+{ "type": "Feature", "properties": { "Id": "186", "Nr_schimbu": 3, "Schimb_1": 501, "Schimb_2": 427, "Schimb_3": 236, "Nr_Sali_lo": null, "Labor_cab": 0, "Salidecls": 18, "person_cal": 57, "pers_neca": 2, "pers_neces": 0, "Nr_Sali_oc": 18, "Nume": "Scoala Gimnaziala I. G. Duca", "layer": "ScoliS5" }, "geometry": { "type": "Point", "coordinates": [ 26.068132111038331, 44.427287531333306 ] } },
+{ "type": "Feature", "properties": { "Id": "191", "Nr_schimbu": 3, "Schimb_1": 550, "Schimb_2": 607, "Schimb_3": 545, "Nr_Sali_lo": null, "Labor_cab": 0, "Salidecls": 21, "person_cal": 93, "pers_neca": 0, "pers_neces": 0, "Nr_Sali_oc": 21, "Nume": "Scoala Gimnaziala Nr. 280", "layer": "ScoliS5" }, "geometry": { "type": "Point", "coordinates": [ 26.071367407490424, 44.412784145857337 ] } },
+{ "type": "Feature", "properties": { "Id": "192", "Nr_schimbu": 3, "Schimb_1": 682, "Schimb_2": 715, "Schimb_3": 224, "Nr_Sali_lo": null, "Labor_cab": 4, "Salidecls": 26, "person_cal": 100, "pers_neca": 2, "pers_neces": 0, "Nr_Sali_oc": 26, "Nume": "Liceul Teoretic Stefan Odobleja", "layer": "ScoliS5" }, "geometry": { "type": "Point", "coordinates": [ 26.062528098420366, 44.417808102166738 ] } }
+]
+};
