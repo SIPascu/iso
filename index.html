@@ -527,7 +527,20 @@
 								interactive: true,
 								onEachFeature: function(feature, layer) {
 									var popupContent =
-										'stația ...'
+										'<table>\
+											<tr>\
+												<td><b>Stația</td><td colspan="2">' + (feature.properties.Statie) + '</b></td>\
+											</tr>\
+											<tr>\
+												<td></td><td colspan="2">' + (feature.properties.TIP_TRANSP) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.LINII_COMU) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Operator</td><td colspan="2">' + (feature.properties.OPERATOR) + '</td>\
+											</tr>\
+										</table>'
 									layer.bindPopup(popupContent, {
 										maxHeight: 400
 									});
