@@ -82,7 +82,7 @@
   </head>
   <body>
 
-		<script src="leaflet.js"></script>
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 		<script src="https://unpkg.com/jquery@3.4.1/dist/jquery.js"></script>
 		<script src="leaflet.reachability.js"></script>
 		<script src="leaflet-sidepanel.min.js"></script>
@@ -250,6 +250,25 @@
 			map.createPane('t');
 			map.getPane('t').style.zIndex = 402;
 			map.getPane('t').style['mix-blend-mode'] = 'normal';
+			
+			function style_c() {
+				return {
+					pane: 'c',
+					opacity: 1,
+					color: 'rgba(106,106,106,1.0)',
+					dashArray: '1,5',
+					lineCap: 'butt',
+					lineJoin: 'miter',
+					weight: 1.0, 
+					fill: true,
+					fillOpacity: 1,
+					fillColor: 'rgba(219,169,255,0.2980392156862745)',
+					interactive: true,
+				}
+			}
+			map.createPane('c');
+			map.getPane('c').style.zIndex = 402;
+			map.getPane('c').style['mix-blend-mode'] = 'normal';
 
 			var conf = {
 				base: {
