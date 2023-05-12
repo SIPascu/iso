@@ -497,8 +497,17 @@
 							layer: (() => {
 								var l = L.geoJson(null,{
 								style: {
-								  color: "#ff0000", // set the stroke color to red
-								  weight: 2 // set the stroke weight to 2 pixels
+									pane: 'c',
+									opacity: 1,
+									color: 'rgba(106,106,106,1.0)',
+									dashArray: '1,5',
+									lineCap: 'butt',
+									lineJoin: 'miter',
+									weight: 1.0, 
+									fill: true,
+									fillOpacity: 1,
+									fillColor: 'rgba(219,169,255,0.2980392156862745)',
+									interactive: true,
 								}
 							  });
 								$.getJSON('data/c.json', j => {
