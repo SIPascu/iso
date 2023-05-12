@@ -510,7 +510,7 @@
 									interactive: true,
 								},
 									onEachFeature: function(feature, layer) {
-									    layer.bindPopup('circumscripția unitîții de învățământ ' + '...');
+									    layer.bindPopup('circumscripția unității de învățământ ' + '...');
 									}
 							  });
 								$.getJSON('data/c.json', j => {
@@ -528,11 +528,7 @@
 								interactive: true,
 								onEachFeature: function(feature, layer) {
 									var popupContent =
-										'<table>\
-											<tr>\
-												<td colspan="2"><b>' + (feature.properties.Nume) + '</b></td>\
-											</tr>\
-										</table>'
+										'stația ...'
 									layer.bindPopup(popupContent, {
 										maxHeight: 400
 									});
