@@ -250,22 +250,9 @@
 			map.createPane('t');
 			map.getPane('t').style.zIndex = 402;
 			map.getPane('t').style['mix-blend-mode'] = 'normal';
-			
-			function style_c() {
-				return {
-					opacity: 1,
-					color: 'rgba(106,106,106,1.0)',
-					dashArray: '1,5',
-					lineCap: 'butt',
-					lineJoin: 'miter',
-					weight: 1.0, 
-					fill: true,
-					fillOpacity: 1,
-					fillColor: 'rgba(219,169,255,0.2980392156862745)',
-				}
-			}
+		
 			map.createPane('c');
-			map.getPane('c').style.zIndex = 402;
+			map.getPane('c').style.zIndex = 300;
 			map.getPane('c').style['mix-blend-mode'] = 'normal';
 
 			var conf = {
@@ -511,7 +498,8 @@
 								},
 									onEachFeature: function(feature, layer) {
 									    layer.bindPopup('circumscripția unității de învățământ ' + '...');
-									}
+									},
+       									zIndex: -1
 							  });
 								$.getJSON('data/c.json', j => {
 									l.addData(j);
