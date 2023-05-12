@@ -508,7 +508,7 @@
 									interactive: true,
 								},
 									onEachFeature: function(feature, layer) {
-									    layer.bindPopup('circumscripția unității de învățământ ' + '...');
+									    layer.bindPopup('circumscripția unității de învățământ ' + (feature.properties.id));
 									},
        									zIndex: -1
 							  });
