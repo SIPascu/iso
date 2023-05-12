@@ -508,7 +508,10 @@
 									fillOpacity: 1,
 									fillColor: 'rgba(219,169,255,0.2980392156862745)',
 									interactive: true,
-								}
+								},
+									onEachFeature: function(feature, layer) {
+									    layer.bindPopup('test');
+									}
 							  });
 								$.getJSON('data/c.json', j => {
 									l.addData(j);
