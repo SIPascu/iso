@@ -169,7 +169,9 @@
 
 		<!-- GEOJSON DATA -->
 		<script src="data/g.js"></script>
-		<script src="data/s.js"></script>
+		<script src="data/s1.js"></script>
+	  	<script src="data/s2.js"></script>
+	  	<script src="data/s3.js"></script>
 		<script src="data/t.js"></script>
 
 		<script>
@@ -288,7 +290,7 @@
 									name: "un schimb",
 									icon: '<i class="fa fa-circle" style="font-size:9px;color:#6e00fe"></i>',
 									layer: L.geoJson(s, {
-								pane: 's',
+								pane: 's1',
 								interactive: true,
 								onEachFeature: function(feature, layer) {
 									var popupContent =
@@ -339,7 +341,7 @@
 									name: "două schimburi",
 									icon: '<i class="fa fa-circle" style="font-size:9px;color:#6e00fe"></i>',
 									layer: L.geoJson(s, {
-								pane: 's',
+								pane: 's2',
 								interactive: true,
 								onEachFeature: function(feature, layer) {
 									var popupContent =
@@ -351,7 +353,13 @@
 												<td>Nr. schimburi</td><td colspan="2">' + (feature.properties.Nr_schimbu) + '</td>\
 											</tr>\
 											<tr>\
-												<td>Laborator ?</td><td colspan="2">' + (feature.properties.Labor_cab) + '</td>\
+												<td>Nr. săli lo?</td><td colspan="2">' + (feature.properties.Nr_Sali_lo) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Labor? cab?</td><td colspan="2">' + (feature.properties.Labor_cab) + '</td>\
 											</tr>\
 											<tr>\
 												<td>Săli de clasă</td><td colspan="2">' + (feature.properties.Salidecls) + '</td>\
@@ -363,10 +371,7 @@
 												<td>Personal necalificat</td><td colspan="2">' + (feature.properties.pers_neca) + '</td>\
 											</tr>\
 											<tr>\
-												<td>Personal ?</td><td colspan="2">' + (feature.properties.pers_neces) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Săli ?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
+												<td>Personal neces?</td><td colspan="2">' + (feature.properties.pers_neces) + '</td>\
 											</tr>\
 										</table>'
 									layer.bindPopup(popupContent, {
@@ -387,7 +392,7 @@
 									name: "trei schimburi",
 									icon: '<i class="fa fa-circle" style="font-size:9px;color:#6e00fe"></i>',
 									layer: L.geoJson(s, {
-								pane: 's',
+								pane: 's3',
 								interactive: true,
 								onEachFeature: function(feature, layer) {
 									var popupContent =
@@ -399,7 +404,13 @@
 												<td>Nr. schimburi</td><td colspan="2">' + (feature.properties.Nr_schimbu) + '</td>\
 											</tr>\
 											<tr>\
-												<td>Laborator ?</td><td colspan="2">' + (feature.properties.Labor_cab) + '</td>\
+												<td>Nr. săli lo?</td><td colspan="2">' + (feature.properties.Nr_Sali_lo) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Labor? cab?</td><td colspan="2">' + (feature.properties.Labor_cab) + '</td>\
 											</tr>\
 											<tr>\
 												<td>Săli de clasă</td><td colspan="2">' + (feature.properties.Salidecls) + '</td>\
@@ -411,10 +422,7 @@
 												<td>Personal necalificat</td><td colspan="2">' + (feature.properties.pers_neca) + '</td>\
 											</tr>\
 											<tr>\
-												<td>Personal ?</td><td colspan="2">' + (feature.properties.pers_neces) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Săli ?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
+												<td>Personal neces?</td><td colspan="2">' + (feature.properties.pers_neces) + '</td>\
 											</tr>\
 										</table>'
 									layer.bindPopup(popupContent, {
