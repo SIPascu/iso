@@ -236,8 +236,8 @@
 			function style_t() {
 				return {
 					pane: 't',
-					radius: 4.0,
-					opacity: 1,
+					radius: 3.0,
+					opacity: 0.55,
 					color: 'rgba(35,35,35,0.0)',
 					dashArray: '',
 					lineCap: 'butt',
@@ -245,7 +245,7 @@
 					weight: 1,
 					fill: true,
 					fillOpacity: 1,
-					fillColor: 'rgba(115,115,115,1.0)',
+					fillColor: 'rgba(115,115,115,0.4)',
 					interactive: true,
 				}
 			}
@@ -302,9 +302,6 @@
 												<td>Nr. schimburi</td><td colspan="2">' + (feature.properties.Nr_schimbu) + '</td>\
 											</tr>\
 											<tr>\
-												<td>Nr. săli lo?</td><td colspan="2">' + (feature.properties.Nr_Sali_lo) + '</td>\
-											</tr>\
-											<tr>\
 												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
 											</tr>\
 											<tr>\
@@ -353,9 +350,6 @@
 												<td>Nr. schimburi</td><td colspan="2">' + (feature.properties.Nr_schimbu) + '</td>\
 											</tr>\
 											<tr>\
-												<td>Nr. săli lo?</td><td colspan="2">' + (feature.properties.Nr_Sali_lo) + '</td>\
-											</tr>\
-											<tr>\
 												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
 											</tr>\
 											<tr>\
@@ -402,9 +396,6 @@
 											</tr>\
 											<tr>\
 												<td>Nr. schimburi</td><td colspan="2">' + (feature.properties.Nr_schimbu) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Nr. săli lo?</td><td colspan="2">' + (feature.properties.Nr_Sali_lo) + '</td>\
 											</tr>\
 											<tr>\
 												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
@@ -529,16 +520,13 @@
 									var popupContent =
 										'<table>\
 											<tr>\
-												<td><b>Stația</td><td colspan="2">' + (feature.properties.Statie) + '</b></td>\
+												<td><b>Stația</td><td colspan="3">' + (feature.properties.Statie) + '</b></td>\
 											</tr>\
 											<tr>\
-												<td></td><td colspan="2">' + (feature.properties.TIP_TRANSP) + '</td>\
+												<td></td><td colspan="3">' + (feature.properties.TIP_TRANSP) + ' ' + (feature.properties.OPERATOR) + '</td>\
 											</tr>\
 											<tr>\
-												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.LINII_COMU) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Operator</td><td colspan="2">' + (feature.properties.OPERATOR) + '</td>\
+												<td>?</td><td colspan="3">' + (feature.properties.LINII_COMU) + '</td>\
 											</tr>\
 										</table>'
 									layer.bindPopup(popupContent, {
