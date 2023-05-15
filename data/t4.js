@@ -3,7 +3,7 @@ var t4 = {
 "name": "TIP_TRANSP_metrou",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "Statie": "Anghel Saligny", "TIP_TRANSP": "metrou", "LINII_COMUU": null, "OPERATOR": null }, "geometry": { "type": "Point", "coordinates": [ 26.208469526862192, 44.405635103057584 ] } },
+{ "type": "Feature", "properties": { "Statie": "Anghel Saligny", "TIP_TRANSP": "metrou", "LINII_COMUU": " ", "OPERATOR": "Metrorex" }, "geometry": { "type": "Point", "coordinates": [ 26.208469526862192, 44.405635103057584 ] } },
 { "type": "Feature", "properties": { "Statie": "Nicolae Teclu", "TIP_TRANSP": "metrou", "LINII_COMUU": " ", "OPERATOR": "Metrorex" }, "geometry": { "type": "Point", "coordinates": [ 26.194193072038015, 44.407754607987407 ] } },
 { "type": "Feature", "properties": { "Statie": "1 Decembrie 1918", "TIP_TRANSP": "metrou", "LINII_COMUU": " ", "OPERATOR": "Metrorex" }, "geometry": { "type": "Point", "coordinates": [ 26.175699919393715, 44.41066219176809 ] } },
 { "type": "Feature", "properties": { "Statie": "Nicolae Grigorescu", "TIP_TRANSP": "metrou", "LINII_COMUU": " ", "OPERATOR": "Metrorex" }, "geometry": { "type": "Point", "coordinates": [ 26.158546788380566, 44.413742996946482 ] } },
