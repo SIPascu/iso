@@ -284,205 +284,8 @@
 				},
 				tree: {
 					title: " ",
-					layers: [{
-							group: "Școli",
-							icon: '<i class="fa fa-circle" style="font-size:9px;color:#6e00fe"></i>',
-							collapsed: true,
-							layers: [{
-									active: false,
-									name: "un schimb",
-									icon: '<i class="fa fa-circle" style="font-size:9px;color:#6e00fe"></i>',
-									layer: L.geoJson(s1, {
-								pane: 's',
-								interactive: true,
-								onEachFeature: function(feature, layer) {
-									var popupContent =
-										'<table>\
-											<tr>\
-												<td colspan="2"><b>' + (feature.properties.Nume) + '</b></td>\
-											</tr>\
-											<tr>\
-												<td>Nr. schimburi</td><td colspan="2">' + (feature.properties.Nr_schimbu) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Labor? cab?</td><td colspan="2">' + (feature.properties.Labor_cab) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Săli de clasă</td><td colspan="2">' + (feature.properties.Salidecls) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Personal calificat</td><td colspan="2">' + (feature.properties.person_cal) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Personal necalificat</td><td colspan="2">' + (feature.properties.pers_neca) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Personal neces?</td><td colspan="2">' + (feature.properties.pers_neces) + '</td>\
-											</tr>\
-										</table>'
-									layer.bindPopup(popupContent, {
-										maxHeight: 400
-									});
-								},
-								pointToLayer: function(feature, latlng) {
-									var context = {
-										feature: feature,
-										variables: {}
-									};
-									return L.circleMarker(latlng, style_s(feature));
-								},
-							})
-								},
-								{
-									active: false,
-									name: "două schimburi",
-									icon: '<i class="fa fa-circle" style="font-size:9px;color:#6e00fe"></i>',
-									layer: L.geoJson(s2, {
-								pane: 's',
-								interactive: true,
-								onEachFeature: function(feature, layer) {
-									var popupContent =
-										'<table>\
-											<tr>\
-												<td colspan="2"><b>' + (feature.properties.Nume) + '</b></td>\
-											</tr>\
-											<tr>\
-												<td>Nr. schimburi</td><td colspan="2">' + (feature.properties.Nr_schimbu) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Labor? cab?</td><td colspan="2">' + (feature.properties.Labor_cab) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Săli de clasă</td><td colspan="2">' + (feature.properties.Salidecls) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Personal calificat</td><td colspan="2">' + (feature.properties.person_cal) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Personal necalificat</td><td colspan="2">' + (feature.properties.pers_neca) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Personal neces?</td><td colspan="2">' + (feature.properties.pers_neces) + '</td>\
-											</tr>\
-										</table>'
-									layer.bindPopup(popupContent, {
-										maxHeight: 400
-									});
-								},
-								pointToLayer: function(feature, latlng) {
-									var context = {
-										feature: feature,
-										variables: {}
-									};
-									return L.circleMarker(latlng, style_s(feature));
-								},
-							})
-								},
-								{
-									active: false,
-									name: "trei schimburi",
-									icon: '<i class="fa fa-circle" style="font-size:9px;color:#6e00fe"></i>',
-									layer: L.geoJson(s3, {
-								pane: 's',
-								interactive: true,
-								onEachFeature: function(feature, layer) {
-									var popupContent =
-										'<table>\
-											<tr>\
-												<td colspan="2"><b>' + (feature.properties.Nume) + '</b></td>\
-											</tr>\
-											<tr>\
-												<td>Nr. schimburi</td><td colspan="2">' + (feature.properties.Nr_schimbu) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Labor? cab?</td><td colspan="2">' + (feature.properties.Labor_cab) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Săli de clasă</td><td colspan="2">' + (feature.properties.Salidecls) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Personal calificat</td><td colspan="2">' + (feature.properties.person_cal) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Personal necalificat</td><td colspan="2">' + (feature.properties.pers_neca) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Personal neces?</td><td colspan="2">' + (feature.properties.pers_neces) + '</td>\
-											</tr>\
-										</table>'
-									layer.bindPopup(popupContent, {
-										maxHeight: 400
-									});
-								},
-								pointToLayer: function(feature, latlng) {
-									var context = {
-										feature: feature,
-										variables: {}
-									};
-									return L.circleMarker(latlng, style_s(feature));
-								},
-							})
-								}
-							]
-						},
-						{
-							active: true,
-							name: "Grădinițe",
-							icon: '<i class="fa fa-circle" style="font-size:9px;color:#01b3ff"></i>',
-							layer: L.geoJson(g, {
-								pane: 'g',
-								interactive: true,
-								onEachFeature: function(feature, layer) {
-									var popupContent =
-										'<table>\
-											<tr>\
-												<td colspan="2"><b>' + (feature.properties.Nume) + '</b></td>\
-											</tr>\
-											<tr>\
-												<td>Nr. schimburi</td><td colspan="2">' + (feature.properties.Nr_schimbu) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Labor? cab?</td><td colspan="2">' + (feature.properties.Labor_cab) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Săli de clasă</td><td colspan="2">' + (feature.properties.Salidecls) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Personal calificat</td><td colspan="2">' + (feature.properties.person_cal) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Personal necalificat</td><td colspan="2">' + (feature.properties.pers_neca) + '</td>\
-											</tr>\
-											<tr>\
-												<td>Personal neces?</td><td colspan="2">' + (feature.properties.pers_neces) + '</td>\
-											</tr>\
-										</table>'
-									layer.bindPopup(popupContent, {
-										maxHeight: 400
-									});
-								},
-								pointToLayer: function(feature, latlng) {
-									var context = {
-										feature: feature,
-										variables: {}
-									};
-									return L.circleMarker(latlng, style_g(feature));
-								},
-							})
-						},
-						{
+					layers: [
+							{
 							group: "Transport în comun",
 							icon: '<i class="fa fa-circle" style="font-size:10px;color:#737373"></i>',
 							collapsed: true,
@@ -619,6 +422,204 @@
 							})
 								}			
 							]
+						},
+							{
+							group: "Școli",
+							icon: '<i class="fa fa-circle" style="font-size:9px;color:#6e00fe"></i>',
+							collapsed: true,
+							layers: [{
+									active: true,
+									name: "un schimb",
+									icon: '<i class="fa fa-circle" style="font-size:9px;color:#6e00fe"></i>',
+									layer: L.geoJson(s1, {
+								pane: 's',
+								interactive: true,
+								onEachFeature: function(feature, layer) {
+									var popupContent =
+										'<table>\
+											<tr>\
+												<td colspan="2"><b>' + (feature.properties.Nume) + '</b></td>\
+											</tr>\
+											<tr>\
+												<td>Nr. schimburi</td><td colspan="2">' + (feature.properties.Nr_schimbu) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Labor? cab?</td><td colspan="2">' + (feature.properties.Labor_cab) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Săli de clasă</td><td colspan="2">' + (feature.properties.Salidecls) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Personal calificat</td><td colspan="2">' + (feature.properties.person_cal) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Personal necalificat</td><td colspan="2">' + (feature.properties.pers_neca) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Personal neces?</td><td colspan="2">' + (feature.properties.pers_neces) + '</td>\
+											</tr>\
+										</table>'
+									layer.bindPopup(popupContent, {
+										maxHeight: 400
+									});
+								},
+								pointToLayer: function(feature, latlng) {
+									var context = {
+										feature: feature,
+										variables: {}
+									};
+									return L.circleMarker(latlng, style_s(feature));
+								},
+							})
+								},
+								{
+									active: true,
+									name: "două schimburi",
+									icon: '<i class="fa fa-circle" style="font-size:9px;color:#6e00fe"></i>',
+									layer: L.geoJson(s2, {
+								pane: 's',
+								interactive: true,
+								onEachFeature: function(feature, layer) {
+									var popupContent =
+										'<table>\
+											<tr>\
+												<td colspan="2"><b>' + (feature.properties.Nume) + '</b></td>\
+											</tr>\
+											<tr>\
+												<td>Nr. schimburi</td><td colspan="2">' + (feature.properties.Nr_schimbu) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Labor? cab?</td><td colspan="2">' + (feature.properties.Labor_cab) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Săli de clasă</td><td colspan="2">' + (feature.properties.Salidecls) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Personal calificat</td><td colspan="2">' + (feature.properties.person_cal) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Personal necalificat</td><td colspan="2">' + (feature.properties.pers_neca) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Personal neces?</td><td colspan="2">' + (feature.properties.pers_neces) + '</td>\
+											</tr>\
+										</table>'
+									layer.bindPopup(popupContent, {
+										maxHeight: 400
+									});
+								},
+								pointToLayer: function(feature, latlng) {
+									var context = {
+										feature: feature,
+										variables: {}
+									};
+									return L.circleMarker(latlng, style_s(feature));
+								},
+							})
+								},
+								{
+									active: true,
+									name: "trei schimburi",
+									icon: '<i class="fa fa-circle" style="font-size:9px;color:#6e00fe"></i>',
+									layer: L.geoJson(s3, {
+								pane: 's',
+								interactive: true,
+								onEachFeature: function(feature, layer) {
+									var popupContent =
+										'<table>\
+											<tr>\
+												<td colspan="2"><b>' + (feature.properties.Nume) + '</b></td>\
+											</tr>\
+											<tr>\
+												<td>Nr. schimburi</td><td colspan="2">' + (feature.properties.Nr_schimbu) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Labor? cab?</td><td colspan="2">' + (feature.properties.Labor_cab) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Săli de clasă</td><td colspan="2">' + (feature.properties.Salidecls) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Personal calificat</td><td colspan="2">' + (feature.properties.person_cal) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Personal necalificat</td><td colspan="2">' + (feature.properties.pers_neca) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Personal neces?</td><td colspan="2">' + (feature.properties.pers_neces) + '</td>\
+											</tr>\
+										</table>'
+									layer.bindPopup(popupContent, {
+										maxHeight: 400
+									});
+								},
+								pointToLayer: function(feature, latlng) {
+									var context = {
+										feature: feature,
+										variables: {}
+									};
+									return L.circleMarker(latlng, style_s(feature));
+								},
+							})
+								}
+							]
+						},
+						{
+							active: true,
+							name: "Grădinițe",
+							icon: '<i class="fa fa-circle" style="font-size:9px;color:#01b3ff"></i>',
+							layer: L.geoJson(g, {
+								pane: 'g',
+								interactive: true,
+								onEachFeature: function(feature, layer) {
+									var popupContent =
+										'<table>\
+											<tr>\
+												<td colspan="2"><b>' + (feature.properties.Nume) + '</b></td>\
+											</tr>\
+											<tr>\
+												<td>Nr. schimburi</td><td colspan="2">' + (feature.properties.Nr_schimbu) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Nr. săli oc?</td><td colspan="2">' + (feature.properties.Nr_Sali_oc) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Labor? cab?</td><td colspan="2">' + (feature.properties.Labor_cab) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Săli de clasă</td><td colspan="2">' + (feature.properties.Salidecls) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Personal calificat</td><td colspan="2">' + (feature.properties.person_cal) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Personal necalificat</td><td colspan="2">' + (feature.properties.pers_neca) + '</td>\
+											</tr>\
+											<tr>\
+												<td>Personal neces?</td><td colspan="2">' + (feature.properties.pers_neces) + '</td>\
+											</tr>\
+										</table>'
+									layer.bindPopup(popupContent, {
+										maxHeight: 400
+									});
+								},
+								pointToLayer: function(feature, latlng) {
+									var context = {
+										feature: feature,
+										variables: {}
+									};
+									return L.circleMarker(latlng, style_g(feature));
+								},
+							})
 						},
 						{
 							active: true,
