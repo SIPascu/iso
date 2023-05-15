@@ -172,7 +172,10 @@
 		<script src="data/s1.js"></script>
 	  	<script src="data/s2.js"></script>
 	  	<script src="data/s3.js"></script>
-		<script src="data/t.js"></script>
+		<script src="data/t1.js"></script>
+		<script src="data/t2.js"></script>
+		<script src="data/t3.js"></script>
+		<script src="data/t4.js"></script>
 
 		<script>
 			// Create the Leaflet map object
@@ -480,6 +483,144 @@
 							})
 						},
 						{
+							group: "Transport în comun",
+							icon: '<i class="fa fa-circle" style="font-size:10px;color:#737373"></i>',
+							collapsed: true,
+							layers: [{
+									active: false,
+									name: "Autobuz",
+									icon: '<i class="fa fa-circle" style="font-size:10px;color:#737373"></i>',
+									layer: L.geoJson(t1, {
+								pane: 't',
+								interactive: true,
+								onEachFeature: function(feature, layer) {
+									var popupContent =
+										'<table>\
+											<tr>\
+												<td><b>Stația</td><td colspan="3">' + (feature.properties.Statie) + '</b></td>\
+											</tr>\
+											<tr>\
+												<td></td><td colspan="3">' + (feature.properties.TIP_TRANSP) + ' operator ' + (feature.properties.OPERATOR) + '</td>\
+											</tr>\
+											<tr>\
+												<td></td><td colspan="3">' + (feature.properties.LINII_COMU) + '</td>\
+											</tr>\
+										</table>'
+									layer.bindPopup(popupContent, {
+										maxHeight: 400
+									});
+								},
+								pointToLayer: function(feature, latlng) {
+									var context = {
+										feature: feature,
+										variables: {}
+									};
+									return L.circleMarker(latlng, style_t(feature));
+								},
+							})
+								},
+								{
+									active: false,
+									name: "Tramvai",
+									icon: '<i class="fa fa-circle" style="font-size:10px;color:#737373"></i>',
+									layer: L.geoJson(t2, {
+								pane: 't',
+								interactive: true,
+								onEachFeature: function(feature, layer) {
+									var popupContent =
+										'<table>\
+											<tr>\
+												<td><b>Stația</td><td colspan="3">' + (feature.properties.Statie) + '</b></td>\
+											</tr>\
+											<tr>\
+												<td></td><td colspan="3">' + (feature.properties.TIP_TRANSP) + ' operator ' + (feature.properties.OPERATOR) + '</td>\
+											</tr>\
+											<tr>\
+												<td></td><td colspan="3">' + (feature.properties.LINII_COMU) + '</td>\
+											</tr>\
+										</table>'
+									layer.bindPopup(popupContent, {
+										maxHeight: 400
+									});
+								},
+								pointToLayer: function(feature, latlng) {
+									var context = {
+										feature: feature,
+										variables: {}
+									};
+									return L.circleMarker(latlng, style_t(feature));
+								},
+							})
+								},
+								{
+									active: false,
+									name: "Troleibuz",
+									icon: '<i class="fa fa-circle" style="font-size:10px;color:#737373"></i>',
+									layer: L.geoJson(t3, {
+								pane: 't',
+								interactive: true,
+								onEachFeature: function(feature, layer) {
+									var popupContent =
+										'<table>\
+											<tr>\
+												<td><b>Stația</td><td colspan="3">' + (feature.properties.Statie) + '</b></td>\
+											</tr>\
+											<tr>\
+												<td></td><td colspan="3">' + (feature.properties.TIP_TRANSP) + ' operator ' + (feature.properties.OPERATOR) + '</td>\
+											</tr>\
+											<tr>\
+												<td></td><td colspan="3">' + (feature.properties.LINII_COMU) + '</td>\
+											</tr>\
+										</table>'
+									layer.bindPopup(popupContent, {
+										maxHeight: 400
+									});
+								},
+								pointToLayer: function(feature, latlng) {
+									var context = {
+										feature: feature,
+										variables: {}
+									};
+									return L.circleMarker(latlng, style_t(feature));
+								},
+							})
+								},
+								{
+									active: false,
+									name: "Metrou",
+									icon: '<i class="fa fa-circle" style="font-size:10px;color:#737373"></i>',
+									layer: L.geoJson(t4, {
+								pane: 't',
+								interactive: true,
+								onEachFeature: function(feature, layer) {
+									var popupContent =
+										'<table>\
+											<tr>\
+												<td><b>Stația</td><td colspan="3">' + (feature.properties.Statie) + '</b></td>\
+											</tr>\
+											<tr>\
+												<td></td><td colspan="3">' + (feature.properties.TIP_TRANSP) + ' operator ' + (feature.properties.OPERATOR) + '</td>\
+											</tr>\
+											<tr>\
+												<td></td><td colspan="3">' + (feature.properties.LINII_COMU) + '</td>\
+											</tr>\
+										</table>'
+									layer.bindPopup(popupContent, {
+										maxHeight: 400
+									});
+								},
+								pointToLayer: function(feature, latlng) {
+									var context = {
+										feature: feature,
+										variables: {}
+									};
+									return L.circleMarker(latlng, style_t(feature));
+								},
+							})
+								}			
+							]
+						},
+						{
 							active: true,
 							name: "Circumscripții școlare",
 							icon: '<i class="fa fa-square" style="font-size:10px;color:#ed90f9;"></i>',
@@ -508,39 +649,6 @@
 								});
 								return l;
 							})()
-						},
-						{
-							active: false,
-							name: "Tranport în comun",
-							icon: '<i class="fa fa-circle" style="font-size:10px;color:#737373"></i>',
-							layer: L.geoJson(t, {
-								pane: 't',
-								interactive: true,
-								onEachFeature: function(feature, layer) {
-									var popupContent =
-										'<table>\
-											<tr>\
-												<td><b>Stația</td><td colspan="3">' + (feature.properties.Statie) + '</b></td>\
-											</tr>\
-											<tr>\
-												<td></td><td colspan="3">' + (feature.properties.TIP_TRANSP) + ' operator ' + (feature.properties.OPERATOR) + '</td>\
-											</tr>\
-											<tr>\
-												<td></td><td colspan="3">' + (feature.properties.LINII_COMU) + '</td>\
-											</tr>\
-										</table>'
-									layer.bindPopup(popupContent, {
-										maxHeight: 400
-									});
-								},
-								pointToLayer: function(feature, latlng) {
-									var context = {
-										feature: feature,
-										variables: {}
-									};
-									return L.circleMarker(latlng, style_t(feature));
-								},
-							})
 						}
 					]
 				}
